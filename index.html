@@ -26,9 +26,23 @@
     .btn { display:inline-block; padding:10px 16px; border-radius:999px; text-decoration:none; color:var(--fg); background:transparent; border:1px solid rgba(125,211,252,.35) }
     .btn:hover { border-color:var(--accent); transform:translateY(-1px) }
     footer { margin-top:40px; color:var(--muted); font-size:14px; text-align:center; }
-    nav { position:fixed; top:0; left:0; right:0; background:var(--bg); padding:12px 20px; box-shadow:0 2px 6px rgba(0,0,0,.4); z-index:100; display:flex; gap:20px; justify-content:center; }
-    nav a { color:var(--fg); text-decoration:none; font-weight:500; }
+
+    /* Navigation styles */
+    nav { position:fixed; top:0; left:0; right:0; background:var(--bg); padding:12px 20px; box-shadow:0 2px 6px rgba(0,0,0,.4); z-index:100; display:flex; justify-content:center; align-items:center; }
+    nav .nav-links { display:flex; gap:20px; }
+    nav a { color:var(--fg); text-decoration:none; font-weight:500; padding-bottom:2px; }
+    nav a.active { border-bottom:2px solid var(--accent); }
     nav a:hover { color:var(--accent); }
+
+    /* Hamburger button */
+    .hamburger { display:none; flex-direction:column; gap:4px; cursor:pointer; }
+    .hamburger span { width:24px; height:3px; background:var(--fg); }
+
+    /* Mobile menu dropdown */
+    .nav-links.mobile { display:none; flex-direction:column; gap:12px; background:var(--bg); position:absolute; top:54px; right:20px; padding:12px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.4); }
+    .nav-links.mobile.show { display:flex; }
+
+    /* Back to top button */
     #topBtn {
       display:none;
       position:fixed;
@@ -46,14 +60,30 @@
       box-shadow:0 2px 6px rgba(0,0,0,.4);
     }
     #topBtn:hover { background:#38bdf8; }
+
+    @media (max-width: 600px) {
+      nav .nav-links.desktop { display:none; }
+      .hamburger { display:flex; }
+    }
   </style>
 </head>
 <body>
 <nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links desktop">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+  </div>
+  <div class="nav-links mobile" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#skills" onclick="toggleMenu()">Skills</a>
+    <a href="#experience" onclick="toggleMenu()">Experience</a>
+    <a href="#education" onclick="toggleMenu()">Education</a>
+  </div>
 </nav>
 
 <main>
@@ -64,15 +94,17 @@
       <a class="btn" href="mailto:abekerman@gmail.com">Email</a>
       <a class="btn" href="https://linkedin.com/in/andresbekerman" target="_blank">LinkedIn</a>
       <a class="btn" href="https://github.com/abekerman-dev" target="_blank">GitHub</a>
-      <a class="btn" href="resume-andres-bekerman.pdf" target="_blank">Download CV (PDF)</a>
+      <a class="btn" href="Resume-Andres-Bekerman-07-2025.pdf" target="_blank">Download CV (PDF)</a>
     </div>
   </header>
 
+  <!-- About -->
   <section id="about">
     <h2>About</h2>
     <p>Bilingual Senior Backend Engineer with 15+ years of experience delivering robust, scalable, high-performance software systems. Skilled in Java, Spring Boot, AWS, Kubernetes, and CI/CD pipelines. Proven track record in leading backend development for greenfield and enterprise projects, optimizing system performance, and mentoring junior engineers. Passionate about digital transformation and building platforms that create real-world value.</p>
   </section>
 
+  <!-- Skills -->
   <section id="skills">
     <h2>Technical Skills</h2>
     <div class="card">
@@ -83,10 +115,11 @@
     </div>
   </section>
 
+  <!-- Experience -->
   <section id="experience">
     <h2>Professional Experience</h2>
 
-    <!-- All roles from your resume -->
+    <!-- All jobs as before -->
     <div class="card"><h3>Backend Developer — scoutt.co (Sep 2024 – Jun 2025)</h3><ul>
       <li>Led backend development for a greenfield platform enabling real-time team formation.</li>
       <li>Built microservices with Java 21, Spring Boot, Docker, Redis, and PostgreSQL on Kubernetes.</li>
@@ -150,6 +183,7 @@
     </ul></div>
   </section>
 
+  <!-- Education -->
   <section id="education">
     <h2>Education</h2>
     <div class="card">
@@ -168,14 +202,37 @@
 
 <script>
 document.getElementById('y').textContent = new Date().getFullYear();
-window.onscroll = function() {
+
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('show');
+}
+
+// Show/hide "Back to top" button
+window.addEventListener('scroll', function() {
   const btn = document.getElementById('topBtn');
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-};
+  btn.style.display = (window.scrollY > 200) ? "block" : "none";
+});
+
+// Scroll-spy effect for nav links
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(sec => {
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 120;
+    const height = sec.offsetHeight;
+    if (top >= offset && top < offset + height) {
+      current = sec.getAttribute("id");
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
 </script>
 </body>
 </html>
