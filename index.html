@@ -3,84 +3,148 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Andrés Bekerman — Senior Java Backend Engineer</title>
-  <meta name="description" content="Senior Java backend engineer specializing in Java, Spring Boot, microservices, and cloud.">
+  <title>Andrés Bekerman — Senior Backend Engineer</title>
+  <meta name="description" content="Senior Backend Engineer specializing in Java, Spring Boot, microservices, AWS, and Kubernetes. 15+ years delivering robust, scalable software.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>☕</text></svg>">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Andrés Bekerman — Senior Java Backend Engineer">
-  <meta property="og:description" content="Java/Spring Boot • Microservices • Cloud Native">
-  <meta property="og:url" content="https://abekerman-dev.github.io/">
-  <meta name="twitter:card" content="summary">
   <style>
     :root { --bg:#0b1020; --fg:#e8eefc; --muted:#9fb1d1; --accent:#7dd3fc; --card:#121a33; }
     @media (prefers-color-scheme: light) {
       :root { --bg:#ffffff; --fg:#0b1220; --muted:#5a6a86; --accent:#0369a1; --card:#f1f5f9; }
     }
-    * { box-sizing: border-box }
-    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; background:var(--bg); color:var(--fg); }
-    main { max-width: 760px; margin: 0 auto; padding: 64px 20px; }
-    header { display:flex; align-items:center; gap:16px; }
-    .avatar { width:64px; height:64px; border-radius:50%; background:var(--card); display:flex; align-items:center; justify-content:center; font-size:32px }
-    h1 { margin: 8px 0 4px; font-size: clamp(28px, 4vw, 40px); line-height:1.1 }
-    p.lead { margin: 0 0 18px; color:var(--muted); font-size: clamp(16px, 2.5vw, 18px) }
-    .card { background:var(--card); padding:18px; border-radius:16px; box-shadow: 0 2px 20px rgba(0,0,0,.12); }
-    .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px }
-    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:999px; text-decoration:none; color:var(--fg); background:transparent; border:1px solid rgba(125,211,252,.35) }
-    .btn:hover { border-color:var(--accent); transform: translateY(-1px) }
-    footer { margin-top:36px; color:var(--muted); font-size:14px }
-    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
-    svg { width:18px; height:18px }
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--fg); line-height:1.6 }
+    main { max-width: 900px; margin: 0 auto; padding: 100px 20px 64px; }
+    h1,h2,h3 { line-height:1.2; }
+    h1 { font-size: clamp(32px, 5vw, 46px); margin:0 }
+    h2 { margin-top: 48px; font-size: clamp(22px, 4vw, 28px) }
+    p { margin-top: 8px; margin-bottom: 16px; }
+    section { margin-bottom: 32px }
+    .lead { font-size: 18px; color: var(--muted); }
+    .card { background:var(--card); padding:20px; border-radius:16px; box-shadow: 0 2px 16px rgba(0,0,0,.15); margin-bottom: 16px; }
+    ul { padding-left: 20px; }
+    .links { margin-top:20px; display:flex; flex-wrap:wrap; gap:12px; }
+    .btn { display:inline-block; padding:10px 16px; border-radius:999px; text-decoration:none; color:var(--fg); background:transparent; border:1px solid rgba(125,211,252,.35) }
+    .btn:hover { border-color:var(--accent); transform:translateY(-1px) }
+    footer { margin-top:40px; color:var(--muted); font-size:14px; text-align:center; }
+    nav { position:fixed; top:0; left:0; right:0; background:var(--bg); padding:12px 20px; box-shadow:0 2px 6px rgba(0,0,0,.4); z-index:100; display:flex; gap:20px; justify-content:center; }
+    nav a { color:var(--fg); text-decoration:none; font-weight:500; }
+    nav a:hover { color:var(--accent); }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Andrés Bekerman",
-    "jobTitle":"Senior Java Backend Engineer",
-    "url":"https://abekerman-dev.github.io/",
-    "sameAs":[
-      "https://www.linkedin.com/in/andresbekerman",
-      "https://github.com/abekerman-dev",
-      "mailto:abekerman@gmail.com"
-    ]
-  }
-  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <div class="avatar" aria-hidden="true">A</div>
-      <div>
-        <h1>Andrés Bekerman</h1>
-        <p class="lead">Senior Java Backend • Spring Boot • Microservices • AWS</p>
-      </div>
-    </header>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+</nav>
 
-    <section class="card" aria-label="About">
-      <p>Bilingual Senior Backend Engineer with 15+ years of experience delivering robust, scalable, high-performance software systems. Skilled in Java, Spring Boot, AWS, Kubernetes, and CI/CD pipelines. Proven track record in leading backend development for greenfield and enterprise projects, optimizing system performance, and mentoring junior engineers. Passionate about digital transformation and building platforms that create real-world value.</p>
-      <div class="links" aria-label="Profiles">
-        <a class="btn" href="https://github.com/abekerman-dev" target="_blank" rel="me noopener">
-          <!-- GitHub -->
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.82 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.37 1.23-3.2-.12-.3-.53-1.5.12-3.12 0 0 1-.32 3.29 1.22a11.39 11.39 0 0 1 6 0c2.28-1.54 3.28-1.22 3.28-1.22.65 1.62.24 2.82.12 3.12.77.83 1.23 1.9 1.23 3.2 0 4.61-2.8 5.63-5.47 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.58A12 12 0 0 0 12 .5Z"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a class="btn" href="https://www.linkedin.com/in/andresbekerman" target="_blank" rel="me noopener">
-          <!-- LinkedIn -->
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.4 8.06h4.2V24H.4zM8.65 8.06h4.03v2.17h.06c.56-1.06 1.95-2.17 4.01-2.17 4.29 0 5.08 2.82 5.08 6.49V24h-4.2v-6.94c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V24H8.65z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <a class="btn" href="mailto:abekerman@gmail.com">
-          <!-- Email -->
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 13 0 6V4l12 7L24 4v2l-12 7Zm-12 1 12 7 12-7V20H0V14Z"/></svg>
-          <span>Email</span>
-        </a>
-      </div>
-    </section>
+<main>
+  <header>
+    <h1>Andrés Bekerman</h1>
+    <p class="lead">Senior Backend Engineer — Java • Spring Boot • Microservices • AWS • Kubernetes</p>
+    <div class="links">
+      <a class="btn" href="mailto:abekerman@gmail.com">Email</a>
+      <a class="btn" href="https://linkedin.com/in/andresbekerman" target="_blank">LinkedIn</a>
+      <a class="btn" href="https://github.com/andresbekerman" target="_blank">GitHub</a>
+      <a class="btn" href="Resume-Andres-Bekerman-07-2025.pdf" target="_blank">Download CV (PDF)</a>
+    </div>
+  </header>
 
-    <footer>
-      <span>© <span id="y"></span> Andrés Bekerman</span>
-    </footer>
-  </main>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <section id="about">
+    <h2>About</h2>
+    <p>Bilingual Senior Backend Engineer with 15+ years of experience delivering robust, scalable, high-performance software systems. Skilled in Java, Spring Boot, AWS, Kubernetes, and CI/CD pipelines. Proven track record in leading backend development for greenfield and enterprise projects, optimizing system performance, and mentoring junior engineers. Passionate about digital transformation and building platforms that create real-world value.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="card">
+      <strong>Languages & Frameworks:</strong> Java (8–21), Spring Boot, Groovy, Grails, Python, React<br>
+      <strong>Cloud & DevOps:</strong> AWS, Docker, Kubernetes, Terraform, Jenkins, CircleCI, GitHub Actions, Spinnaker<br>
+      <strong>Databases & Messaging:</strong> PostgreSQL, MySQL, MongoDB, Redis, Cassandra, Kafka, RabbitMQ<br>
+      <strong>Tools & Platforms:</strong> Datadog, GitLab, Retool, Komodor, gRPC, Protocol Buffers, SOAP/XML, JSON/HTTP
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+
+    <div class="card"><h3>Backend Developer — scoutt.co (Sep 2024 – Jun 2025)</h3><ul>
+      <li>Led backend development for a greenfield platform enabling real-time team formation.</li>
+      <li>Built microservices with Java 21, Spring Boot, Docker, Redis, and PostgreSQL on Kubernetes.</li>
+      <li>Implemented CI/CD with GitHub Actions and maintained high unit test coverage.</li>
+    </ul></div>
+
+    <div class="card"><h3>Senior Software Engineer (Contractor) — Roku via Blend (May 2024 – Aug 2024)</h3><ul>
+      <li>Refactored and deprecated SpotX ad-serving features to improve maintainability.</li>
+      <li>Worked with Java, AWS, MySQL, Jenkins, and Datadog on mediation systems.</li>
+    </ul></div>
+
+    <div class="card"><h3>Sr Software Engineer (Contractor) — TTG Group via Razor Tech (Nov 2023 – Apr 2024)</h3><ul>
+      <li>Integrated TTG’s platform with third-party providers using SOAP/XML and HTTP/JSON.</li>
+      <li>Supported backend services and a back-office system migrated to Retool.</li>
+      <li>Conducted code reviews ensuring production quality standards.</li>
+    </ul></div>
+
+    <div class="card"><h3>Software Java Backend Developer (Contractor) — Wisetack via Svitla Systems (Jul 2022 – Jun 2023)</h3><ul>
+      <li>Led “First Month Prepayment” feature reducing delinquency rates.</li>
+      <li>Mentored junior developers and trained QA in monitoring/log analysis.</li>
+      <li>Stack: Java 11, Python, AWS, React, Terraform, Datadog.</li>
+    </ul></div>
+
+    <div class="card"><h3>Payments Software Engineer — Bitso (Mar 2022 – May 2022)</h3><ul>
+      <li>Member of DeFi Squad focusing on onboarding new fiat/crypto currencies.</li>
+      <li>Ensured transactional accuracy and resolved payment issues.</li>
+      <li>Stack: Java 17, Spring Boot, Redis, PostgreSQL, AWS, Kubernetes.</li>
+    </ul></div>
+
+    <div class="card"><h3>Senior Software Engineer (Contractor) — Venmo via Taller Technologies (Apr 2021 – Nov 2021)</h3><ul>
+      <li>Developed Kafka ingestion and gRPC data services for PaaS Ledger team.</li>
+      <li>Spearheaded Jenkins→GitHub Actions migration and Dockerized local environments.</li>
+      <li>Stack: Java 11, Spring, Kafka, Cassandra.</li>
+    </ul></div>
+
+    <div class="card"><h3>Senior Software Engineer — Spark Digital (Sep 2019 – Mar 2021)</h3><ul>
+      <li>Maintained ad-tech backend systems (Column6).</li>
+      <li>Delivered Spring Boot services processing offline audience data (MediaMath).</li>
+    </ul></div>
+
+    <div class="card"><h3>Senior Software Engineer — Overactive (Feb 2019 – Aug 2019)</h3><ul>
+      <li>Migrated .NET monolith into Spring Boot microservices deployed on AWS.</li>
+      <li>Supported backend systems for palliative care management.</li>
+    </ul></div>
+
+    <div class="card"><h3>Free-lance Software Engineer (Nov 2018 – Jan 2019)</h3></div>
+
+    <div class="card"><h3>Senior Java Developer (Contractor) — Sprint via ProKarma (Nov 2017 – Sep 2018)</h3><ul>
+      <li>Built and maintained SOAP APIs within Sprint’s SAFe scrum teams.</li>
+      <li>Used Java 8 and Oracle DB in multi-vendor environment.</li>
+    </ul></div>
+
+    <div class="card"><h3>Backend Developer — Avantrip.com (Jun 2016 – Oct 2017)</h3><ul>
+      <li>Led backend integration with Amadeus for airline ticket system.</li>
+      <li>Contributed to early Docker adoption with prototypes.</li>
+    </ul></div>
+
+    <div class="card"><h3>Trainer, Mentor, Translator (Aug 2012 – Jun 2016)</h3><ul>
+      <li>Taught Java programming at academies and companies.</li>
+      <li>Translated technical documents (EN↔ES).</li>
+    </ul></div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <p><strong>Degree in English-Spanish Technical, Scientific, and Literary Translation</strong><br>CAFI — 2008–2014</p>
+      <p><strong>B.Sc. Coursework in Computer Science (60% complete)</strong><br>University of Buenos Aires — 1998–2005</p>
+      <p><strong>Computer Technician (High School Degree)</strong><br>ORT Technical School — 1992–1997</p>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="y"></span> Andrés Bekerman — Buenos Aires, Argentina
+  </footer>
+</main>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
