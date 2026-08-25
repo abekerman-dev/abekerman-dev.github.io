@@ -73,15 +73,17 @@
     <span></span><span></span><span></span>
   </div>
   <div class="nav-links desktop">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
+    <a href="#summary">Professional Summary</a>
+    <a href="#tech-skills">Technical Skills</a>
+    <a href="#soft-skills">Soft Skills</a>
+    <a href="#experience">Professional Experience</a>
     <a href="#education">Education</a>
   </div>
   <div class="nav-links mobile" id="mobileMenu">
-    <a href="#about" onclick="toggleMenu()">About</a>
-    <a href="#skills" onclick="toggleMenu()">Skills</a>
-    <a href="#experience" onclick="toggleMenu()">Experience</a>
+    <a href="#summary" onclick="toggleMenu()">Professional Summary</a>
+    <a href="#tech-skills" onclick="toggleMenu()">Technical Skills</a>
+    <a href="#soft-skills" onclick="toggleMenu()">Soft Skills</a>
+    <a href="#experience" onclick="toggleMenu()">Professional Experience</a>
     <a href="#education" onclick="toggleMenu()">Education</a>
   </div>
 </nav>
@@ -98,30 +100,47 @@
     </div>
   </header>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About</h2>
-    <p>Bilingual Senior Backend Engineer with 15+ years of experience delivering robust, scalable, high-performance software systems. Skilled in Java, Spring Boot, AWS, Kubernetes, and CI/CD pipelines. Proven track record in leading backend development for greenfield and enterprise projects, optimizing system performance, and mentoring junior engineers. Passionate about digital transformation and building platforms that create real-world value.</p>
+  <section id="summary">
+    <h2>Professional Summary</h2>
+    <p>Bilingual (English/Spanish) Senior Backend Engineer with 15+ years of experience leading backend development — from greenfield builds to evolving existing systems — with deep expertise in Java, Spring Boot, AWS, and Kubernetes across microservices, distributed systems, and cloud-native architectures. Recently expanded into AI-assisted development, building personal automation tools with Claude Code to parse emails and extract structured financial data.</p>
   </section>
 
-  <!-- Skills -->
-  <section id="skills">
+  <section id="tech-skills">
     <h2>Technical Skills</h2>
     <div class="card">
-      <strong>Languages & Frameworks:</strong> Java (8–21), Spring, Spring Boot, Python, React<br>
-      <strong>Cloud & DevOps:</strong> AWS, Docker, Kubernetes, Terraform, Jenkins, CircleCI, GitHub Actions<br>
-      <strong>Databases & Messaging:</strong> PostgreSQL, MySQL, MongoDB, Redis, Cassandra, Kafka<br>
-      <strong>Tools & Platforms:</strong> Datadog, GitLab, gRPC, Protocol Buffers, SOAP/XML, JSON/HTTP
+      <strong>Languages & Frameworks:</strong> Java (8–25), Spring, Spring Boot, Python, Bash/Zsh, React<br>
+      <strong>Cloud & DevOps:</strong> AWS (S3, EC2, Lambda, DynamoDB, SQS, SNS, CloudWatch), Docker, Kubernetes, Terraform<br>
+      <strong>Databases:</strong> PostgreSQL, MySQL, DynamoDB, Redis, Cassandra<br>
+      <strong>Messaging & APIs:</strong> Kafka, REST/JSON, SOAP/XML, OpenAPI, gRPC, Protocol Buffers<br>
+      <strong>CI/CD & Monitoring:</strong> GitHub Actions, GitLab, Jenkins, CircleCI, Datadog<br>
+      <strong>Architecture:</strong> Microservices, Cloud-native, Hexagonal Architecture<br>
     </div>
   </section>
 
-  <!-- Experience -->
+  <section id="soft-skills">
+    <h2>Soft Skills</h2>
+    <div class="card">
+      <strong>Mentorship & Leadership:</strong> Skilled at guiding junior engineers and cross-functional teams, fostering growth while driving technical excellence.<br>
+      <strong>Communication & Precision:</strong> Bilingual English–Spanish communicator with strong attention to detail, ensuring clarity, accuracy, and high-quality outcomes across multicultural teams.<br>
+    </div>
+  </section>
+
   <section id="experience">
     <h2>Professional Experience</h2>
 
-    <!-- All jobs as before -->
-    <div class="card"><h3>Backend Developer — scoutt.co (Sep 2024 – Jun 2025)</h3><ul>
-      <li>Led backend development for a greenfield platform that allows real-time formation of software engineering teams with visibility into skills, productivity, and availability.</li>
+    <div class="card"><h3>Lead Backend Developer (contractor) – 84.51° via SunnyData (Dec 2025 – Now)</h3><ul>
+      <li>Provide production support for platform access issues.</li>
+      <li>Support the migration of users from Salesforce to EMP (the internal user management system), including content migrations driven by user account changes.</li>
+      <li>Stack: Java, Spring, Spring Boot, PostgreSQL, RabbitMQ, Salesforce, Datadog.</li>
+    </ul></div>
+
+    <div class="card"><h3>Freelance International Technical Interviewer – flocareer.com (Sep 2025 – Now)</h3><ul>
+      <li>Conduct in-depth international technical interviews for Java Backend roles, assessing candidates' problem-solving and system design skills.</li>
+      <li>Evaluate practical knowledge of technologies like Spring Boot, REST APIs, microservices, and cloud-native architectures.</li>
+    </ul></div>
+
+    <div class="card"><h3>Senior Backend Developer — scoutt.co (Sep 2024 – Jun 2025)</h3><ul>
+      <li>Led backend development for a greenfield platform that allows real-time formation of software engineering teams with visibility into , productivity, and availability.</li>
       <li>Designed, developed, and deployed microservices with hexagonal architecture in Java 21 and Spring Boot, Docker, PostgreSQL, Redis, and Kubernetes.</li>
       <li>Integrated a microservice with Google Gemini API via REST.</li>
       <li>Implemented CI/CD pipelines with GitHub Actions and maintained high code coverage through unit testing.</li>
@@ -178,7 +197,6 @@
     </ul></div>
   </section>
 
-  <!-- Education -->
   <section id="education">
     <h2>Education</h2>
     <div class="card">
@@ -202,13 +220,11 @@ function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('show');
 }
 
-// Show/hide "Back to top" button
 window.addEventListener('scroll', function() {
   const btn = document.getElementById('topBtn');
   btn.style.display = (window.scrollY > 200) ? "block" : "none";
 });
 
-// Scroll-spy effect for nav links
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 window.addEventListener("scroll", () => {
